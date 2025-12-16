@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance Prosperity Index (GPI)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Governance Prosperity Index (GPI)</h1>
+    <p>A simple metric evaluating ruling parties and prime ministers based on economic, social, and infrastructure indicators.</p>
+</header>
+
+<main>
+    <section id="data-section">
+        <h2>Latest GPI Scores by Country</h2>
+        <input type="text" id="search-input" placeholder="Search countries...">
+        <table id="gpi-table">
+            <thead>
+            <tr>
+                <th>Country</th>
+                <th>GPI Score (0-100)</th>
+                <th>Year</th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            <!-- Data populated by JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <section id="chart-section">
+        <h2>Top 20 Countries by GPI</h2>
+        <canvas id="gpi-chart" width="400" height="200"></canvas>
+    </section>
+</main>
+
+<footer>
+    <p>Data from <a href="data.csv">data.csv</a> (Update CSV to refresh). Deployed via GitHub Pages.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
