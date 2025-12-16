@@ -11,8 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize map
     map = L.map('map').setView([20, 0], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19
     }).addTo(map);
+
+    map.attributionControl.setPrefix(false);
 
     // Enhanced aliases: forward (CSV to GeoJSON) and reverse (GeoJSON to CSV match)
     const forwardAliases = {
