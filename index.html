@@ -18,12 +18,16 @@
 
 <main>
     <section id="map-section">
-        <h2>GPI World Map</h2>
+        <h2>GPI World Map (Click a country for its time-series chart)</h2>
         <div id="map" style="height: 500px; width: 100%;"></div>
     </section>
 
     <section id="data-section">
-        <h2>Latest GPI Scores by Country</h2>
+        <div id="year-filter" style="margin-bottom: 20px; display: none;">
+            <label for="year-select"><strong>Select Year:</strong></label>
+            <select id="year-select"></select>
+        </div>
+        <h2>GPI Scores by Country</h2>
         <input type="text" id="search-input" placeholder="Search countries...">
         <table id="gpi-table">
             <thead>
@@ -38,9 +42,10 @@
     </section>
 
     <section id="chart-section">
-        <h2>Top 20 Countries by GPI</h2>
+        <h2 id="chart-title">Top 20 Countries by GPI</h2>
         <canvas id="gpi-chart" width="400" height="200"></canvas>
     </section>
+
 </main>
 
 <footer>
